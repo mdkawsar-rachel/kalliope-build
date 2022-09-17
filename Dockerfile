@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM debian:latest
 
 RUN apt update && sudo apt install -y \
     git python3-dev libsmpeg0 libttspico-utils flac \
