@@ -8,17 +8,12 @@ RUN apt-get install -y \
     pulseaudio-utils libasound2-plugins python3-pyaudio libasound-dev \
     libportaudio2 libportaudiocpp0 ffmpeg
 
-RUN apt-get install -y swig make libexpat1-dev libpython2.7 libpython2.7-dev libpython-dev python2.7-dev > python-dev libstdc++-4.9-dev g++
-RUN git clone https://github.com/Kitt-AI/snowboy
-RUN cd snowboy/swig/Python
-RUN make
-
 RUN wget http://ubuntu.mirrors.tds.net/ubuntu/pool/multiverse/s/svox/libttspico-data_1.0+git20130326-8_all.deb
 RUN wget http://http.us.debian.org/debian/pool/non-free/s/svox/libttspico0_1.0+git20130326-9_amd64.deb
 RUN wget http://ftp.us.debian.org/debian/pool/non-free/s/svox/libttspico-utils_1.0+git20130326-9_amd64.deb
 RUN dpkg -i libttspico-data_1.0+git20130326-8_all.deb
 RUN dpkg -i libttspico0_1.0+git20130326-9_amd64.deb
-RUN dpkg -i libttspico-utils_1.0+git20130326-9_amd64.deb
+RUN apt-get install -f ./libttspico-utils_1.0+git20130326-9_amd64.deb
 RUN wget https://bootstrap.pypa.io/get-pip.py
 
 RUN python3 get-pip.py
