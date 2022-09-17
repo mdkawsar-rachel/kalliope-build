@@ -1,6 +1,6 @@
 FROM debian:latest
 
-RUN apt update && sudo apt install -y \
+RUN sudo apt update && sudo apt install -y \
     git python3-dev libsmpeg0 libttspico-utils flac \
     libffi-dev libssl-dev portaudio19-dev build-essential \
     libatlas3-base mplayer wget vim sudo locales alsa-base alsa-utils \
