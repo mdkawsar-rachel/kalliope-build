@@ -2,7 +2,7 @@ FROM debian:latest
 
 RUN apt-get update 
 RUN apt-get install -y \
-    git python3-dev libpython3-dev libsmpeg0 libttspico-utils flac \
+    git libpython3-dev libsmpeg0 libttspico-utils flac \
     libffi-dev libssl-dev portaudio19-dev build-essential \
     libatlas3-base mplayer wget vim sudo locales \
     pulseaudio-utils libasound2-plugins python3-pyaudio libasound-dev \
