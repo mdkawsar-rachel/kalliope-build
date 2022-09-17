@@ -11,9 +11,9 @@ RUN apt-get install -y \
 RUN wget http://ftp.fr.debian.org/debian/pool/non-free/s/svox/libttspico-data_1.0+git20130326-3_all.deb
 RUN wget http://ftp.fr.debian.org/debian/pool/non-free/s/svox/libttspico0_1.0+git20130326-3_armhf.deb
 RUN wget http://ftp.fr.debian.org/debian/pool/non-free/s/svox/libttspico-utils_1.0+git20130326-3_armhf.deb
-RUN sudo dpkg -i libttspico-data_1.0+git20130326-3_all.deb
-RUN sudo dpkg -i libttspico0_1.0+git20130326-3_armhf.deb
-RUN sudo dpkg -i libttspico-utils_1.0+git20130326-3_armhf.deb
+RUN dpkg -i libttspico-data_1.0+git20130326-3_all.deb
+RUN dpkg -i libttspico0_1.0+git20130326-3_armhf.deb
+RUN dpkg -i libttspico-utils_1.0+git20130326-3_armhf.deb
 RUN wget https://bootstrap.pypa.io/get-pip.py
 
 RUN python3 get-pip.py
