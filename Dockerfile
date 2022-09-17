@@ -8,7 +8,7 @@ RUN apt-get install -y \
     pulseaudio-utils libasound2-plugins python3-pyaudio libasound-dev \
     libportaudio2 libportaudiocpp0 ffmpeg
 
-RUN apt-get install -y swig make libexpat1-dev libpython2.7 libpython2.7-dev libpython-dev python2.7-dev > python-dev libstdc++-4.9-dev g++
+RUN apt-get install -y swig make libexpat1-dev libpython3.5 libpython3.5-dev libpython-dev python3.5-dev > python-dev libstdc++-4.9-dev g++
 RUN git clone https://github.com/Kitt-AI/snowboy
 RUN cd snowboy/swig/Python
 RUN make
